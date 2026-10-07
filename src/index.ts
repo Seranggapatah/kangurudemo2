@@ -10,7 +10,7 @@ const button1 = document.getElementById("button") as HTMLButtonElement;
 const button2 = document.getElementById("button2") as HTMLButtonElement;
 const button3 = document.getElementById("button3") as HTMLButtonElement;
 const riveSrc = new URL(
-  "./janCat.riv",
+  "./kanguru.riv",
   import.meta.url
 ).href;
 
@@ -32,19 +32,19 @@ const r = new Rive({
       return;
     }
 
-    button1.addEventListener("click", changeNumber);
-    function changeNumber(): void {
-    vmi.number("numberProperty1").value = 1;
-    console.log("button1 clicked");
+    button1.addEventListener("click", triggerbtm);
+    function triggerbtm(): void {
+    vmi.trigger("waving").trigger();
+    console.log("button1 clicked")
     }
-    button2.addEventListener("click", changeNumber2);
-    function changeNumber2(): void {
-    vmi.number("numberProperty1").value = 2;
+    button2.addEventListener("click", triggerbtm2);
+    function triggerbtm2(): void {
+    vmi.trigger("pointing").trigger();
     console.log("button2 clicked");
     }
-    button3.addEventListener("click", changeNumber3);
-    function changeNumber3(): void {
-    vmi.number("numberProperty1").value = 0;
+    button3.addEventListener("click", triggerbtm3);
+    function triggerbtm3(): void {
+    vmi.trigger("thumbsup").trigger();
     console.log("button3 clicked");
     }
   },
