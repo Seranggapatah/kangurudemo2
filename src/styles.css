@@ -79,3 +79,16 @@ body {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.number-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.number-control input {
+  width: 90px;
+  padding: 8px;
+  font-size: 16px;
+}
